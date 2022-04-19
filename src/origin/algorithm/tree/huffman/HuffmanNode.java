@@ -4,10 +4,26 @@ package origin.algorithm.tree.huffman;
  * @author 原初
  * @create 2022 - 04 - 16
  */
-public class HuffmanNode implements Comparable<HuffmanNode>{
+public class HuffmanNode<T> implements Comparable<HuffmanNode>{
     private Integer value;
     private HuffmanNode left;
     private HuffmanNode right; //左右孩子
+    private T data;
+
+    public HuffmanNode(Integer value, HuffmanNode left, HuffmanNode right, T data) {
+        this.value = value;
+        this.left = left;
+        this.right = right;
+        this.data = data;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
 
     public Integer getValue() {
         return value;
